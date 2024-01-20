@@ -1,0 +1,23 @@
+{
+  "name": "redux-learn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SumanM1234/Redux-learn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SumanM1234/Redux-learn/issues"
+  },
+  "homepage": "https://github.com/SumanM1234/Redux-learn#readme",
+  "dependencies": {
+    "redux": "^5.0.1"
+  }
+}
