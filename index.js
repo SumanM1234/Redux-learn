@@ -2,6 +2,10 @@ const redux = require('redux');
 const createStore = redux.createStore;
 const bindActionCreators = redux.bindActionCreators;
 const combineReducers = redux.combineReducers;
+const applyMiddleware = redux.applyMiddleware;
+
+const reduxLogger = require('redux-logger');
+const logger = reduxLogger.createLogger();
 
 const CAKE_ORDERED = 'CAKE_ORDERED'
 const CAKE_RESTOCKED = 'CAKE_RESTOCKED'
@@ -95,12 +99,13 @@ const rootReducer = combineReducers({
     iceCream: iceCreamReducer,
 })
 
-const store = createStore(rootReducer)   // First line of execution & store is created
+const store = createStore(rootReducer, applyMiddleware(logger))   // First line of execution & store is created
+// Always pass the middleware in the applyMiddleware method
 console.log('Initial state : ', store.getState())
 // console.log('Initial state : ', store.getState().cake.numOfCakes) // Only accessing numOfCakes property from the rootReducer
-const unsubscribe = store.subscribe(() =>
+const unsubscribe = store.subscribe(() => {}
   // Listener gets called anytime the store updates
-  console.log("Updated state : ", store.getState())
+  // console.log("Updated state : ", store.getState())
   // console.log("Updated state : ", store.getState().cake.numOfCakes)
 )
 
