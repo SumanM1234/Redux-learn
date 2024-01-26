@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/SumanM1234/Redux-learn#readme",
   "dependencies": {
+    "immer": "^10.0.3",
     "redux": "^5.0.1"
   }
 }
